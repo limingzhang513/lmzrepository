@@ -1,0 +1,72 @@
+
+项目目录文档说明：
+1、项目根目录					说明
+	/DataSet             	项目应用核心目录
+	/logs					项目日志目录
+	接口文档.txt
+	需求文档.txt
+	注释文档.txt
+	目录文档.txt
+	config.py				项目配置文件
+	manage.py				项目启动文件
+
+
+2、项目/DataSet目录				说明
+	/api_0_1				项目视图函数--后端接口
+	/fastdfs				分布式存储文件
+	/models  				项目模型类
+	/token                  项目权限文件
+	/utils					项目通用设施--自定义正则、登录验证装饰器，json文件转换等
+	__init__.py				项目应用初始化文件--应用程序实例、数据库实例、蓝图等
+	web_page.py             视图函数--用来处理静态页面的访问
+
+
+3、项目/DataSet/api_0_1目录		        说明
+    /admin					        项目管理员文件
+        /admin/view.py              权限增加删除
+
+	/main					        项目普通用户文件
+	    /main/collection_view.py    数据集创建增删改查
+	    /main/share_view.py         数据集分享
+	    /main/version_view.py       数据集版本
+
+	/user				            项目标注用户文件
+	    /user/view.py               用户注册登陆
+    __init__.py
+
+
+4、项目/DataSet/fastdfs目录		说明
+    __init__.py	            fast链接路径
+    config                  fast配置文件
+    view                    自定义fast上传函数
+
+
+5、项目/DataSet/models目录		说明
+    __init__.py
+    baseModel.py            时间基类
+    collectionModel.py      集合
+    imageModel.py           图片
+    labelModel.py           标签
+    versionModel.py         版本
+    roleModel.py            角色
+    shareModel.py           分享
+    userModel.py            用户
+
+
+6、项目/DataSet/token目录		说明
+    __init__.py	            登陆认证
+
+
+7、项目/DataSet/utils目录			说明
+    __init__.py
+    auth_decorator          用户权限认证
+    change_json_file        json文件存储/图片存储
+    commons                 自定义正则转换器--用户登陆装饰器(session方式)
+    create_json_file        xml文件转json/图片像素读取
+    serial_code             自定义状态码
+
+
+python manage.py db init
+python manage.py db migrate
+python manage.py db upgrade
+

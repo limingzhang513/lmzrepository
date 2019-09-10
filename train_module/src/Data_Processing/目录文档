@@ -1,0 +1,91 @@
+
+项目目录文档说明：
+1、项目根目录					说明
+	/DS             	    接口及逻辑
+	/logs					项目日志
+	/tests                  keras及caffe训练服务及所有逻辑(可扩展)
+	/supervisor_conf        supervisor配置文件
+	/接口文档.docx
+	/需求文档.docx
+	/注释文档.txt
+	/目录文档.txt
+	/config.py				项目配置文件
+	/manage.py				项目启动文件
+	/py2_server_req.txt     主服务及caffe依赖（python2.7.15）
+	/py3_tensorflow_req.txt keras依赖（python3.6.2）
+
+
+2、项目/DS目录				说明
+	/api_0_1				所有接口
+	/static					静态文件
+	/utils					逻辑功能
+	__init__.py				初始化文件
+	models.py				表设计
+
+
+3、项目/DS/api_0_1目录		说明
+    __init__.py             初始化
+    /user/                  登录接口（见接口文档）
+    /models_training/       模型处理有关接口（见接口文档）
+    /tasks_training/        任务处理有关接口（见接口文档）
+
+
+4、项目/DS/models目录         说明
+    /baseModel.py           基类表
+    /datasetModel.py        数据集管理表
+    /modelsModel.py         模型管理表
+    /tasksModel.py          任务管理表
+    /resultModel.py         训练结果管理表
+
+
+5、项目/DS/static目录			说明
+    /datasets/			    维护用户数据集
+	/train_result/			维护用户训练结果
+	/custom_model/			用户上传模型(预留)
+
+
+6、项目/DS/token目录          说明
+    /auths.py               验证用户身份逻辑
+
+
+7、项目/DS/utils目录			说明
+    /auth_decorator.py      用户身份验证装饰器
+    /commons.py             自定义正则转换器
+    /dataset_sorted.py      分类数据集
+    /download_to_db.py      处理数据集：将下载数据集转换成lmdb文件
+    /download_unzip.py      处理数据集：将下载的数据集转换成目录文件列表
+    /download_util.py       处理数据集通用逻辑
+    /mq_send.py             分发任务队列
+    /serial_code.py         自定义状态码
+    /train_req.py           消费者函数：启动模型训练
+    /timing_task.py         定时任务：分割日志文件，删除到期静态文件
+
+
+8、项目/logs目录              说明
+    /server.log             接口服务器运行日志
+    /celery.log             异步任务运行日志（数据集预处理等）
+    /rabbitmq.log           管道运行日志
+    /timing_task.log        定时任务运行日志
+    /keras_server.log       keras服务运行日志
+    /caffe_server.log       caffe服务运行日志
+
+
+9、项目/tests目录             说明
+    /caffe_classification/  caffe分类训练所有逻辑（包含vgg16，resnet50）
+    /keras_classification/  keras分类训练所有逻辑（包含vgg16，resnet50）
+    /caffe_server.py        caffe训练服务
+    /keras_server.py        keras训练服务
+
+
+10、项目/supervisor_conf目录  说明
+    /conf.d/                所有任务配置文件
+    /supervisord.conf       supervisor主配置文件
+
+
+
+
+
+python manage.py db init
+python manage.py db migrate
+python manage.py db upgrade
+

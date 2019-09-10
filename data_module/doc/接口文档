@@ -1,0 +1,297 @@
+
+/用户登陆
+请求方法:POST
+请求URL:/login
+请求参数:
+参数名         是否必须        参数描述
+uset_data        是          表单数据
+username         是          用户登陆账号
+password         是          用户登陆密码
+
+返回结果:
+正确情况下:
+return jsonify(err_no=0,err_desc='OK',
+                data={"time_used": 58,
+	            "requestID": "6F9619FF-8B86-D011-B42D-00C04FC964FF"
+	            })
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+
+-----------------------------------------------------------------
+
+/用户退出
+请求方法:GET
+请求URL:/logout
+请求参数:
+参数名         是否必须        参数描述
+csrf_token       ？           csrf_token
+
+返回结果:
+正确情况下:
+return jsonify(err_no=RET.OK, err_desc='OK')
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+
+/用户集--收藏首页
+请求方法:GET
+请求URL:/index
+请求参数:
+参数名         是否必须        参数描述
+personage        是          用户数据
+my_json          是          str数据
+
+返回结果:
+正确情况下:
+    resp = '{"err_no":0,"err_desc":"OK","data":%s}' % my_json
+    return resp
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+
+---------------------------------------------------------------------------------
+
+/用户集--收藏首页--详情
+请求方法:GET
+请求URL:/index/<int:personage_id>
+请求参数:
+参数名         是否必须        参数描述
+personage_id     是             int值(用户传递的数据集编号)
+ret              是             redis用户详情缓存
+public           是             mysql用户集合对象
+redis_store      是             redis 链接对象
+resp             是             json存储数据
+
+返回结果:
+正确情况下:
+return '{"err_no:0", "err_desc:OK","data":{"user_id:%s","personage:%s"}}' % (g.user_id, personage_json)
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+
+---------------------------------------------------------------------------------
+
+/用户集--公共首页 （暂时取消）
+请求方法:GET
+请求URL:/data_module/get_datasets_list
+请求参数:
+参数名         是否必须        参数描述
+index            是          用户数据
+my_json          是          str数据
+
+返回结果:
+正确情况下:
+    resp = '{"err_no":0,"err_desc":"OK","data":%s}' % my_json
+    return resp
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+
+-------------------------------------------------------------------------
+
+/用户集--公共首页--详情  （暂时取消）
+请求方法:GET
+请求URL:/data_module/get_datasets_list/<int:public_id>
+请求参数:
+参数名         是否必须        参数描述
+user_id          是            redis：用户id
+
+
+
+返回结果:
+正确情况下:
+return jsonify(err_no=0,err_desc='？？？？？')
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+
+-------------------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+
+/用户集--创建数据集
+请求方法:POST
+请求URL:/data_module/create_dataset
+请求参数:
+参数名         是否必须        参数描述
+user_id          是          用户id
+user             是          用户
+user_data        是          表单数据
+title            是          数据集名称
+personage        是          数据库对象
+
+返回结果:
+正确情况下:
+return jsonify(err_no=RET.OK, err_desc='OK', data={'user_id': gather.id})
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+
+-------------------------------------------------------------------------
+
+/用户集--删除数据集
+请求方法:DELETE
+请求URL:/data_module/delete_dataset
+请求参数:
+参数名         是否必须        参数描述
+user_id          是             用户id
+uer_data         是             表单数据
+name             是             数据集名称
+
+
+返回结果:
+正确情况下:
+return jsonify(err_no=RET.OK, err_desc='OK')
+
+错误情况下:
+return jsonify(err_no=1, err_desc='错误描述')
+
+-------------------------------------------------------------------------
+
+/用户集--下载数据集  (暂时取消)
+请求方法:GET
+请求URL://data_module/download_dataset
+请求参数:
+参数名         是否必须        参数描述
+???
+???
+
+返回结果:
+正确情况下:
+return jsonify(err_no=RET.OK, err_desc='OK', data={'???': ???})
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+-------------------------------------------------------------------------
+
+
+/用户集--修改数据集  （暂时取消）
+请求方法:POST
+请求URL://data_module/update_dataset
+请求参数:
+参数名         是否必须        参数描述
+user_id          是          用户id
+gather           是          数据集名称
+
+返回结果:
+正确情况下:
+return jsonify(err_no=RET.OK, err_desc='OK', data={'user_id': gather.id})
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+
+-------------------------------------------------------------------------
+-----------------------------------------------------------------
+
+
+/用户集--图片上传
+请求方法:POST
+请求URL://data_module/upload_images
+请求参数:
+参数名         是否必须        参数描述
+fdfs_client      是          fastFDS连接客户端
+fdfs_redis       是          redis配置信息
+filename         否           自定义文件名
+file_ext_name    否           文件扩展名
+buf              是           文件
+vmp              是           文件上传返回值
+stored_filename  否          储存的远程文件名
+
+返回结果:
+正确情况下:
+return '{"err_no:0", "err_desc:OK","data":%s' % vmp
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+
+-----------------------------------------------------------------
+
+/用户集--图片删除
+请求方法:DELETE
+请求URL:/data_module/remove_images
+请求参数:
+参数名         是否必须        参数描述
+fdfs_client      是           连接池
+fdfs_redis       是           redis配置信息
+filename         否           自定义文件名
+stored_filename  否           储存的远程文件名
+
+返回结果:
+正确情况下:
+return jsonify(err_no=RET.OK, err_desc='OK')
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+
+-----------------------------------------------------------------
+
+/用户集--图片下载
+请求方法:GET
+请求URL:/data_module/download_images
+请求参数:
+参数名         是否必须        参数描述
+fdfs_client      是           连接池
+fdfs_redis       是           redis配置信息
+finfo            是           文件信息详情
+ret              是           文件地址
+
+filename         否           自定义文件名
+stored_filename  否           储存的远程文件名
+
+返回结果:
+正确情况下:
+return jsonify(err_no=RET.OK, err_desc='OK')
+
+错误情况下:
+return jsonify(err_no=1,err_desc='错误描述')
+
+
+-----------------------------------------------------------------
+    ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+    (↓↓↓↓↓↓↓↓未定义 以后在做的页面↓↓↓↓↓↓↓↓)
+def list(pattern='*'):
+    """
+    列出文件列表
+    """
+    fdfs_client = fastdfsClient()
+    fdfs_redis = []
+    for i in fast_setting.fdfs_redis_dbs:
+        fdfs_redis.append(redis.Redis(host=i[0], port=i[1], db=i[2]))
+
+    return random.choice(fdfs_redis).keys(pattern)
+
+def getInfo(filename):
+    """
+    获得文件信息
+    return:{
+    'group':组名,
+    'file_id':不含组名的文件ID,
+    'size':文件尺寸,
+    'upload_time':上传时间
+    }
+    """
+    fdfs_client = fastdfsClient()
+    fdfs_redis = []
+    for i in fast_setting.fdfs_redis_dbs:
+        fdfs_redis.append(redis.Redis(host=i[0], port=i[1], db=i[2]))
+
+    return random.choice(fdfs_redis).hgetall(filename)

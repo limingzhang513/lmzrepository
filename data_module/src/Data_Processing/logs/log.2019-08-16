@@ -1,0 +1,5 @@
+{"time": "2019-08-16 18:15:46", "name": "_internal.py[line:88]", "levelname": "INFO", "message": " * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)"}
+{"time": "2019-08-16 18:16:18", "name": "_internal.py[line:88]", "levelname": "INFO", "message": "127.0.0.1 - - [16/Aug/2019 18:16:18] "GET / HTTP/1.1" 404 -"}
+{"time": "2019-08-16 18:16:18", "name": "_internal.py[line:88]", "levelname": "INFO", "message": "127.0.0.1 - - [16/Aug/2019 18:16:18] "GET /favicon.ico HTTP/1.1" 404 -"}
+{"time": "2019-08-16 18:20:10", "name": "_internal.py[line:88]", "levelname": "INFO", "message": "127.0.0.1 - - [16/Aug/2019 18:20:10] "GET /login HTTP/1.1" 405 -"}
+{"time": "2019-08-16 18:20:33", "name": "_internal.py[line:88]", "levelname": "INFO", "message": "127.0.0.1 - - [16/Aug/2019 18:20:33] "GET /logout HTTP/1.1" 200 -"}

@@ -1,0 +1,260 @@
+/用户注册
+请求方法:POST
+支持格式：JSON
+请求URL:/api/users
+请求参数:
+参数名         是否必须    类型         参数描述
+user_name        是      string       用户登陆账号
+password         是      string       用户登陆密码
+ 
+
+请求示例：
+{
+    "user_name":"kang",
+    "password":"123456"
+}
+
+输出示例：
+{
+    "err_desc": "OK",
+    "err_no": "0",
+    "requestID": "129c28c1-19ee-4202-89f8-17731c12b524",
+    "time_used": 3171,
+    "user_name": "kang"
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/用户登陆
+请求方法:POST
+支持格式：JSON
+请求URL:/login
+请求参数:
+参数名         是否必须    类型         参数描述
+username         是      string       用户登陆账号
+password         是      string       用户登陆密码
+ 
+返回结果:                                                                           
+return jsonify(err_no=RET.OK, err_desc='OK',
+                   user_name=user_name, requestID=requestID,
+                   time_used=int(time_used))
+
+
+请求示例：
+{
+    "user_name":"kang",
+    "password":"123456"
+}
+
+输出示例：
+{
+    "err_desc": "OK",
+    "err_no": "0",
+    "requestID": "129c28c1-19ee-4202-89f8-17731c12b524",
+    "time_used": 3171,
+    "user_name": "kang"
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/用户集--创建数据集
+请求方法:POST
+支持格式：From-Data
+请求URL:/data_module/create_dataset
+接口详情： 
+	数据集创建标签可单个/多个添加，
+	abel_file与upload_file不可同时存在，
+	但是一定要有一个存在
+请求参数:
+参数名         是否必须      类型        参数描述
+name             是        text        数据集名称
+data_type        是        text        数据集类型
+desc             是        text        数据集描述
+label_type  	 是 		   text	       标注类别
+upload_file      否 		   file 	   标签文件
+
+请求示例(多标注添加)  /  单标注添加 'label_type': (None, '1：cat)
+{
+    'name': (None, 'test'),
+    'data_type': (None, '1'),
+    'desc': (None, 'testfile'),
+    'label_type': (None, '1:cat,2:dog,3:panda')
+}
+
+or
+
+请求示例(文件上传) 
+{
+    'name': (None, 'test'),
+    'data_type': (None, '1'),
+    'desc': (None, 'testfile'),
+    'upload_file': ('xy.prototxt', open(r'C:\Users\asdc\Desktop\filelabel.txt', 'rb'), 'text/plain')
+}
+
+输出示例
+{
+    "err_no": 0,
+    "err_desc": "OK",
+    "dataset_id": "9",
+    "request_id": "129c28c1-19ee-4202-89f8-17731c12b524",
+    "time_used": 5381
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+图片上传--分类/人脸识别
+请求方法:POST
+支持格式:From-Data
+请求URL:/data_module/upload_image/<collection_name>
+接口详情： <collection_name> 为动态参数，指数据集名称
+	该接口实现 新增 标注上传/未标注上传 批量上传，
+	选择不同功能请严格按照示例填选
+请求参数:
+参数名         		是否必须      	类型        	参数描述
+status           	   是        	text       选择操作状态
+new_label		 	   否 		   	text 	   新增标签名称
+upload_image_site      否 		  	file 	   图片文件
+table_site		 	   否		    file 	   对应表文件
+
+请求示例(新增标签)
+{
+	'status': (None, 'add_label'),
+	'new_label': (None, '1:cat'),
+}
+
+or
+
+请求示例(对应表上传,单张图片)
+{
+	'status': (None, 'appoint_table'),
+	'upload_image_site': ('dogs.jpg', open(r'C:\Users\asdc\Desktop\dogs.jpg', 'rb'), 'image/png'),
+	'table_site': ('image_list.txt', open(r'C:\Users\asdc\Desktop\image_list.txt', 'rb'), 'text/plain')
+}
+
+请求示例(对应表上传,多张图片)
+data={
+    'status': (None, 'appoint_table'),
+}
+files = [
+		('table_site': ('image_list.txt', open(r'C:\Users\asdc\Desktop\image_list.txt', 'rb'), 'text/plain'))
+        ('upload_image_site', ('aaa.png', open('/home/python/Desktop/test/a.png', 'rb'), 'image/png')),
+        ('upload_image_site', ('bbb.jpg', open('/home/python/Desktop/test/b.jpg', 'rb'), 'image/jpg')),
+        ('upload_image_site', ('ccc.jpeg', open('/home/python/Desktop/test/c.jpeg', 'rb'), 'image/jpeg')),
+  		('...')
+]
+
+or
+
+请求示例(未标注上传)
+	描述：取消对应表'table_site'参数， 
+		 图片'upload_image_site'为必选参数，
+		 单张/多张与上述方法一致
+{
+	'status': (None, 'default')
+}
+
+or
+
+请求示例(标注上传)
+	描述：标签类别一次只能选取一个， 图片可进行单张/多张上传
+		 取消对应表'table_site'参数， 
+		 图片'upload_image_site'为必选参数，
+		 单张/多张与上述方法一致
+{
+	'status': (None, '1:dog')
+}
+
+输出示例
+{
+    "err_no": 0,
+    "err_desc": "OK",
+    "dataset_id": "9",
+    "request_id": "129c28c1-19ee-4202-89f8-17731c12b524",
+    "time_used": 5381
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+图片上传--检测/分割
+请求方法:POST
+支持格式:From-Data
+请求URL:/data_module/upload_images/<collection_name>
+接口详情： <collection_name> 为动态参数，指数据集名称
+	该接口实现 新增 标注上传/未标注上传 批量上传，
+	选择不同功能请严格按照示例填选
+请求参数:
+参数名         		是否必须      	类型        	参数描述
+status           	   是        	text       选择操作状态
+upload_image_site      否 		  	file 	   图片文件
+label_file		 	   否		    file 	   标注文件
+table_site		 	   否		    file 	   对应表文件
+
+请求示例(未标注上传,单张图片)
+{
+	'status': (None, 'default'),
+	'upload_image_site': ('dogs.jpeg', open(r'C:\Users\asdc\Desktop\dogs.jpg', 'rb'), 'image/jpeg'),
+}
+
+请求示例(未标注上传,多张图片)
+data={
+    'status': (None, 'default'),
+}
+files = [
+        ('upload_image_site', ('aaa.png', open('/home/python/Desktop/test/a.png', 'rb'), 'image/png')),
+        ('upload_image_site', ('bbb.jpg', open('/home/python/Desktop/test/b.jpg', 'rb'), 'image/jpg')),
+        ('upload_image_site', ('ccc.jpeg', open('/home/python/Desktop/test/c.jpeg', 'rb'), 'image/jpeg')),
+  		('...')
+]
+
+or
+
+请求示例(已标注，未选择对应表),(单图单标注)
+	描述： 该功能没有status参数
+{
+	'upload_image_site': ('dogs.jpeg', open(r'C:\Users\asdc\Desktop\dogs.jpg', 'rb'), 'image/jpeg'),
+	'label_file': ('dogs.xml', open(r'C:\Users\asdc\Desktop\dogs.xml', 'rb'), 'application/xml')
+}
+
+请求示例(已标注，未选择对应表),(多图多标注)
+files = [
+        ('upload_image_site', ('dogs.jpg', open(r'C:\Users\asdc\Desktop\dogs.jpg', 'rb'), 'image/jpg')),
+        ('upload_image_site', ('cats.jpg', open('/home/python/Desktop/test/cats.jpg', 'rb'), 'image/jpg')),
+        ('...')，
+        ('label_file', ('dogs.xml', open('/home/python/Desktop/test/dogs.xml', 'rb'), 'application/xml')),
+        ('label_file', ('cats.xml', open('/home/python/Desktop/test/cats.xml', 'rb'), 'application/xml')),
+  		('...')
+]
+
+or
+
+请求示例(对应表)
+{
+	'status': (None, 'appoint_table'),
+	'table_site': ('image_list_voc.txt', open(r'C:\Users\asdc\Desktop\image_list_voc.txt', 'rb'), 'text/plain')
+	'upload_image_site': ('dogs.jpeg', open(r'C:\Users\asdc\Desktop\dogs.jpg', 'rb'), 'image/jpeg'),
+	'label_file': ('dogs.xml', open(r'C:\Users\asdc\Desktop\dogs.xml', 'rb'), 'application/xml')
+}
+
+请求示例(对应表), (多图片多标注)
+data={
+	'status': (None, 'appoint_table'),
+}
+
+files = [
+		('table_site', ('image_list_voc.txt', open(r'C:\Users\asdc\Desktop\image_list_voc.txt', 'rb'), 'text/plain')),
+        ('upload_image_site', ('dogs.jpg', open(r'C:\Users\asdc\Desktop\dogs.jpg', 'rb'), 'image/jpg')),
+        ('upload_image_site', ('cats.jpg', open('/home/python/Desktop/test/cats.jpg', 'rb'), 'image/jpg')),
+        ('...')，
+        ('label_file', ('dogs.xml', open('/home/python/Desktop/test/dogs.xml', 'rb'), 'application/xml')),
+        ('label_file', ('cats.xml', open('/home/python/Desktop/test/cats.xml', 'rb'), 'application/xml')),
+  		('...')
+]
+
+输出示例
+{
+    "err_no": 0,
+    "err_desc": "OK",
+    "dataset_id": "9",
+    "request_id": "129c28c1-19ee-4202-89f8-17731c12b524",
+    "time_used": 5381
+}

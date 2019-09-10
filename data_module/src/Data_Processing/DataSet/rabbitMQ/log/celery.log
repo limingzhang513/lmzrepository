@@ -1,0 +1,266 @@
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7f97383bb2c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7fbb006202c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7f8add8682c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7f46df8772c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7f62be1d32c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7fb7985622c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7f860739d2c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7f4e930232c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7f3ffc7b32c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7f3a834ef2c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7f9da91312c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7fd1a697b2c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7f5cff1ef2c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
+DEBUG:passlib.utils.compat:loaded lazy attr 'SafeConfigParser': <class ConfigParser.SafeConfigParser at 0x7fe91f1bd2c0>
+DEBUG:passlib.utils.compat:loaded lazy attr 'NativeStringIO': <built-in function StringIO>
+DEBUG:passlib.utils.compat:loaded lazy attr 'BytesIO': <built-in function StringIO>
+Traceback (most recent call last):
+  File "/usr/local/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python2.7/dist-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/celery.py", line 496, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 273, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 487, in setup_app_from_commandline
+    self._handle_user_preload_options(argv)
+  File "/usr/local/lib/python2.7/dist-packages/celery/bin/base.py", line 492, in _handle_user_preload_options
+    user_preload = tuple(self.app.user_options['preload'] or ())
+AttributeError: 'Flask' object has no attribute 'user_options'
