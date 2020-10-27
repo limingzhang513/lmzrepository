@@ -6,7 +6,7 @@ celery==4.2.1
 certifi==2018.10.15
 cffi==1.11.5
 chardet==3.0.4
-cryptography==2.3.1
+cryptography==3.2
 enum34==1.1.6
 fdfs-client==4.0.7
 Flask==0.10.1
